@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///C:/Users/LENOVO/Downloads/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunjaman Singh Hospital</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #059669;
+            --secondary: #0891b2;
+            --accent: #f59e0b;
+            --light-bg: #ecfdf5;
+            --text-dark: #064e3b;
+            --text-light: #6b7280;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); background: white; }
+
+        /* HEADER */
+        header { background: white; box-shadow: 0 2px 10px rgba(5, 150, 105, 0.15); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; padding: 0.8rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .logo { font-size: 1.3rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+
+        .nav-links { display: flex; list-style: none; gap: 0.5rem; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 4px; font-weight: 500; transition: all 0.3s; border: 2px solid transparent; }
+        .nav-links a:hover, .nav-links a.active { background: var(--light-bg); color: var(--primary); border-bottom: 2px solid var(--primary); }
+
+        .header-right { display: flex; gap: 1rem; align-items: center; }
+        .lang-btn { background: var(--light-bg); border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
+        .lang-btn.active { background: var(--primary); color: white; }
+
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
+        @media (max-width: 768px) { .menu-toggle { display: block; } .nav-links { display: none; } .nav-links.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 1rem; } }
+
+        /* BREADCRUMB */
+        .breadcrumb { background: var(--light-bg); padding: 0.8rem 2rem; font-size: 0.85rem; color: var(--text-light); border-bottom: 2px solid var(--primary-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #059669 0%, #0891b2 50%, #14b8a6 100%); color: white; padding: 5rem 2rem; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+        .btn { padding: 0.8rem 2rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; font-weight: 600; transition: all 0.3s; text-decoration: none; }
+        .btn-primary { background: white; color: var(--primary); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,255,255,0.3); }
+
+        /* SECTIONS */
+        .section-container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; border-bottom: 1px solid rgba(5, 150, 105, 0.1); }
+        .section-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+        .section-intro { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.8; }
+
+        /* CARDS */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.1); transition: all 0.3s; border-left: 4px solid var(--primary); border-top: 4px solid #14b8a6; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(5, 150, 105, 0.2); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.3rem; }
+        .card p { color: var(--text-light); line-height: 1.8; }
+
+        /* DOCTOR CARD */
+        .doctor-card { text-align: center; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.1); background: white; transition: all 0.3s; }
+        .doctor-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(5, 150, 105, 0.2); }
+        .doctor-image { width: 100%; height: 200px; background: linear-gradient(135deg, #059669 0%, #0891b2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .doctor-info { padding: 1.5rem; }
+        .doctor-info h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .doctor-info p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 0.3rem; }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box { background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%); border-left: 4px solid var(--primary); padding: 2rem; border-radius: 8px; margin: 2rem 0; }
+        .highlight-box h4 { color: var(--primary); margin-bottom: 1rem; }
+        .highlight-box ul { list-style: none; padding-left: 0; }
+        .highlight-box li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light); }
+        .highlight-box li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+
+        /* FOOTER */
+        footer { background: var(--primary); color: white; padding: 3rem 2rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        .footer-section a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; text-align: center; }
+
+        /* CONTACT GRID */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .contact-card { background: var(--light-bg); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary); }
+        .contact-card h4 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
+        .contact-card p { color: var(--text-light); margin-bottom: 0.5rem; }
+        .contact-card a { color: #14b8a6; text-decoration: none; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            nav { padding: 0.5rem 1rem; }
+            .section-title { font-size: 1.8rem; }
+            .section-container { padding: 2rem 1rem; }
+            .hero h1 { font-size: 2rem; }
+            .breadcrumb { padding: 0.5rem 1rem; font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="file:///C:/Users/LENOVO/Downloads/index.html#home" class="logo active">🏥 Gunjaman Singh Hospital</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#home" class="nav-btn" data-en="Home" data-np="गृह पृष्ठ">Home</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#about" class="nav-btn" data-en="About" data-np="हाम्रोबारे">About</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#services" class="nav-btn" data-en="Services" data-np="सेवाहरू">Services</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#doctors" class="nav-btn" data-en="Doctors" data-np="डाक्टरहरु">Doctors</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#infrastructure" class="nav-btn" data-en="Infrastructure" data-np="अवस्थापना">Infrastructure</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#testimonials" class="nav-btn" data-en="Reviews" data-np="समीक्षा">Reviews</a></li>
+                <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#contact" class="nav-btn" data-en="Contact" data-np="सम्पर्क">Contact</a></li>
+            </ul>
+            <div class="header-right">
+                <div>
+                    <button class="lang-btn" onclick="setLanguage(&#39;en&#39;)">ENG</button>
+                    <button class="lang-btn" onclick="setLanguage(&#39;np&#39;)">नेपाली</button>
+                </div>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <div class="breadcrumb" id="home"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a></div>
+    <section class="hero" id="home-section">
+        <h1 data-en="The Healthcare You Deserve" data-np="तपाइँले पाउनुपर्ने स्वास्थ्य सेवा">The Healthcare You Deserve</h1>
+        <p data-en="Dedicated to providing quality, accessible healthcare to Chitwan &amp; Makwanpur communities." data-np="चितवन र मकवानपुर जिल्लाको समुदायलाई गुणस्तरीय स्वास्थ्य सेवा।">Dedicated to providing quality, accessible healthcare to Chitwan &amp; Makwanpur communities.</p>
+        <button class="btn btn-primary" onclick="scrollToSection(&#39;contact&#39;)" data-en="Book Appointment" data-np="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</button>
+    </section>
+
+    <!-- ABOUT -->
+    <div class="breadcrumb" id="about"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a> / <span data-en="About" data-np="हाम्रोबारे">About</span></div>
+    <section class="section-container" id="about-section">
+        <h2 class="section-title"><span>🏥</span><span data-en="About Our Hospital" data-np="हाम्रो अस्पतालको बारेमा">About Our Hospital</span></h2>
+        <p class="section-intro" data-en="Gunjaman Singh Hospital, founded under Human Development and Community Services (HDCS), operates as a non-profit, no-profit-no-loss institution dedicated to serving marginalized and underserved communities." data-np="गुञ्जमान सिंह अस्पताल मानव विकास र सामुदायिक सेवा (HDCS) को छातानमा स्थापित एक गैर-लाभकारी संस्था हो।">Gunjaman Singh Hospital, founded under Human Development and Community Services (HDCS), operates as a non-profit, no-profit-no-loss institution dedicated to serving marginalized and underserved communities.</p>
+        <div class="cards-grid">
+            <div class="card">
+                <h3 data-en="📍 Location" data-np="📍 स्थान">📍 Location</h3>
+                <p data-en="Pithuwa, Ward 14, Ratnanagar, Chitwan, Bagmati Province. Serving Chitwan and Makwanpur districts with reach to remote villages." data-np="पिथुवा, वार्ड 14, रत्ननगर, चितवन। दूरस्थ गाँवहरूसम्मको सेवा।">Pithuwa, Ward 14, Ratnanagar, Chitwan, Bagmati Province. Serving Chitwan and Makwanpur districts.</p>
+            </div>
+            <div class="card">
+                <h3 data-en="🎯 Our Focus" data-np="🎯 हाम्रो फोकस">🎯 Our Focus</h3>
+                <p data-en="Committed to serving Chepang, Dalit, Janajati, Tharu, and Madhesi communities. Special emphasis on economically disadvantaged populations." data-np="चेपाङ, दलित, जनजाति, थारु, र मधेसी समुदायलाई सेवा गर्न।">Committed to serving Chepang, Dalit, Janajati, Tharu, and Madhesi communities.</p>
+            </div>
+            <div class="card">
+                <h3 data-en="💚 Core Values" data-np="💚 मूल मूल्यवोधहरु">💚 Core Values</h3>
+                <p data-en="Compassion, Accessibility, Excellence, Community Focus, Sustainability, and Transparency guide our mission to deliver quality care." data-np="सहानुभूति, पहुँच, उत्कृष्टता र पारदर्शिता हाम्रो कार्यलाई निर्देशित गर्छ।">Compassion, Accessibility, Excellence, Community Focus, Sustainability, and Transparency.</p>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h4 data-en="Hospital Infrastructure" data-np="अस्पताल अवस्थापना">Hospital Infrastructure</h4>
+            <ul>
+                <li data-en="50-bed capacity with modern wards" data-np="50 शैया क्षमता आधुनिक वार्ड के साथ">50-bed capacity with modern wards</li>
+                <li data-en="24/7 electricity and water supply" data-np="24/7 बिजुली और जल आपूर्ति">24/7 electricity and water supply</li>
+                <li data-en="Advanced medical equipment and safety systems" data-np="उन्नत चिकित्सा उपकरण और सुरक्षा प्रणाली">Advanced medical equipment and safety systems</li>
+                <li data-en="Environmental waste management" data-np="पर्यावरण अपशिष्ट प्रबंधन">Environmental waste management</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <div class="breadcrumb" id="services"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a> / <span data-en="Services" data-np="सेवाहरू">Services</span></div>
+    <section class="section-container" id="services-section">
+        <h2 class="section-title"><span>🏥</span><span data-en="Healthcare Services" data-np="स्वास्थ्य सेवा">Healthcare Services</span></h2>
+        <p class="section-intro" data-en="Comprehensive healthcare from emergency response to preventive care and rehabilitation." data-np="आपातकालीन सेवा देखि निवारक देखभाल र पुनरुद्धार सेवा।">Comprehensive healthcare from emergency response to preventive care and rehabilitation.</p>
+        <div class="cards-grid">
+            <div class="card"><h3>🚑 <span data-en="Emergency Care" data-np="आपतकालीन सेवा">Emergency Care</span></h3><p data-en="24/7 emergency services with trained professionals for trauma, cardiac emergencies, and life-saving interventions." data-np="आघात, हृदय आपातकाल के लिए 24/7 सेवा।">24/7 emergency services with trained professionals for trauma and cardiac emergencies.</p></div>
+            <div class="card"><h3>👨‍⚕️ <span data-en="General Medicine" data-np="सामान्य चिकित्सा">General Medicine</span></h3><p data-en="Treatment for acute and chronic illnesses with expert diagnosis and management." data-np="तीव्र और दीर्घकालीन रोगों का उपचार।">Treatment for acute and chronic illnesses with expert physicians.</p></div>
+            <div class="card"><h3>🔬 <span data-en="Laboratory Services" data-np="प्रयोगशाला सेवा">Laboratory Services</span></h3><p data-en="Advanced diagnostic laboratory with blood tests, biochemistry, and pathology analysis." data-np="रक्त परीक्षण, जैव रसायन विश्लेषण सेवा।">Advanced diagnostic lab with blood tests and pathology analysis.</p></div>
+            <div class="card"><h3>📸 <span data-en="X-Ray &amp; Imaging" data-np="एक्स-रे र इमेजिङ">X-Ray &amp; Imaging</span></h3><p data-en="Digital X-ray and ultrasound imaging for accurate disease diagnosis." data-np="डिजिटल एक्स-रे और अल्ट्रासाउंड।">Digital X-ray and ultrasound imaging services.</p></div>
+            <div class="card"><h3>💉 <span data-en="Preventive Care" data-np="निवारक सेवा">Preventive Care</span></h3><p data-en="Health screenings, vaccinations, and wellness programs for disease prevention." data-np="स्वास्थ्य जाँच, खोप, और कल्याण कार्यक्रम।">Health screenings, vaccinations, and wellness programs.</p></div>
+            <div class="card"><h3>🏃 <span data-en="Rehabilitation" data-np="पुनरुद्धार सेवा">Rehabilitation</span></h3><p data-en="Physiotherapy and post-treatment recovery programs for optimal patient outcomes." data-np="शारीरिक चिकित्सा और उपचार पश्चात पुनरुद्धार।">Physiotherapy and post-treatment recovery programs.</p></div>
+        </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <div class="breadcrumb" id="doctors"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a> / <span data-en="Medical Team" data-np="चिकित्सा टीम">Medical Team</span></div>
+    <section class="section-container" id="doctors-section">
+        <h2 class="section-title"><span>👨‍⚕️</span><span data-en="Specialist Doctors" data-np="विशेषज्ञ डाक्टरहरु">Specialist Doctors</span></h2>
+        <p class="section-intro" data-en="Highly qualified and experienced medical professionals dedicated to patient care." data-np="उच्च योग्य और अनुभवी चिकित्सा पेशेवर।">Highly qualified and experienced medical professionals dedicated to patient care.</p>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="doctor-card"><div class="doctor-image">👨‍⚕️</div><div class="doctor-info"><h3>Dr. Durgesh Man Singh</h3><p><strong>MBBS, MD(General Medicine)</strong></p><p data-en="Senior Physician" data-np="वरिष्ठ चिकित्सक">Senior Physician</p><p style="color: #14b8a6; font-weight: 600; margin-top: 0.5rem;">20+ Years</p></div></div>
+            <div class="doctor-card"><div class="doctor-image">👩‍⚕️</div><div class="doctor-info"><h3>Dr. Priya Sharma</h3><p><strong>MBBS, MD(Obstetrics)</strong></p><p data-en="Gynecologist" data-np="स्त्री रोग विशेषज्ञ">Gynecologist</p><p style="color: #14b8a6; font-weight: 600; margin-top: 0.5rem;">18+ Years</p></div></div>
+            <div class="doctor-card"><div class="doctor-image">👨‍⚕️</div><div class="doctor-info"><h3>Dr. Rajesh Kumar</h3><p><strong>MBBS, MD(Radiology)</strong></p><p data-en="Radiologist" data-np="एक्स-रे विशेषज्ञ">Radiologist</p><p style="color: #14b8a6; font-weight: 600; margin-top: 0.5rem;">15+ Years</p></div></div>
+            <div class="doctor-card"><div class="doctor-image">👩‍⚕️</div><div class="doctor-info"><h3>Dr. Neha Patel</h3><p><strong>MBBS, MD(Pathology)</strong></p><p data-en="Pathologist" data-np="पैथोलॉजिस्ट">Pathologist</p><p style="color: #14b8a6; font-weight: 600; margin-top: 0.5rem;">12+ Years</p></div></div>
+            <div class="doctor-card"><div class="doctor-image">👨‍⚕️</div><div class="doctor-info"><h3>Dr. Anil Singh</h3><p><strong>MBBS, MD(Anesthesia)</strong></p><p data-en="Anesthesiologist" data-np="एनेस्थेशियोलजिस्ट">Anesthesiologist</p><p style="color: #14b8a6; font-weight: 600; margin-top: 0.5rem;">17+ Years</p></div></div>
+            <div class="doctor-card"><div class="doctor-image">👩‍⚕️</div><div class="doctor-info"><h3>Dr. Sunita Das</h3><p><strong>BPT, MPT(Physiotherapy)</strong></p><p data-en="Physiotherapist" data-np="शारीरिक चिकित्सक">Physiotherapist</p><p style="color: #14b8a6; font-weight: 600; margin-top: 0.5rem;">10+ Years</p></div></div>
+        </div>
+    </section>
+
+    <!-- INFRASTRUCTURE -->
+    <div class="breadcrumb" id="infrastructure"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a> / <span data-en="Infrastructure" data-np="अवस्थापना">Infrastructure</span></div>
+    <section class="section-container" id="infrastructure-section">
+        <h2 class="section-title"><span>🏢</span><span data-en="Hospital Infrastructure" data-np="अस्पताल अवस्थापना">Hospital Infrastructure</span></h2>
+        <p class="section-intro" data-en="Modern facilities designed for patient comfort and safety." data-np="रोगी आराम और सुरक्षा के लिए डिजाइन किए गए आधुनिक सुविधा।">Modern facilities designed for patient comfort and safety.</p>
+        <div class="contact-grid">
+            <div class="contact-card"><h4>🏗️ <span data-en="Building" data-np="निर्माण">Building</span></h4><p data-en="2-storey with 5-storey expansion provision. 50-bed capacity." data-np="2-मंजिला, 50 शैया क्षमता के साथ।">2-storey building with 50-bed capacity.</p></div>
+            <div class="contact-card"><h4>⚡ <span data-en="Power Supply" data-np="बिजली आपूर्ति">Power Supply</span></h4><p data-en="24/7 electricity with backup generators and solar power." data-np="बैकअप जनरेटर और सौर शक्ति के साथ 24/7।">24/7 electricity with backup and solar systems.</p></div>
+            <div class="contact-card"><h4>💧 <span data-en="Water Supply" data-np="जल आपूर्ति">Water Supply</span></h4><p data-en="Continuous supply with filtration and purification systems." data-np="फ़िल्टरिंग और शुद्धिकरण प्रणाली के साथ।">Continuous supply with filtration and purification.</p></div>
+            <div class="contact-card"><h4>🔒 <span data-en="Safety" data-np="सुरक्षा">Safety</span></h4><p data-en="Fire safety, smoke detectors, emergency exits, regular drills." data-np="अग्नि सुरक्षा, आपातकालीन निकास।">Fire safety, detectors, emergency exits.</p></div>
+            <div class="contact-card"><h4>🧪 <span data-en="Equipment" data-np="उपकरण">Equipment</span></h4><p data-en="Digital X-ray, ultrasound, lab equipment, monitoring systems." data-np="डिजिटल एक्स-रे, अल्ट्रासाउंड, निगरानी प्रणाली।">Digital X-ray, ultrasound, lab equipment.</p></div>
+            <div class="contact-card"><h4>♻️ <span data-en="Waste Management" data-np="अपशिष्ट प्रबंधन">Waste Management</span></h4><p data-en="Safe disposal, hazardous-non-hazardous segregation." data-np="सुरक्षित निपटान, खतरनाक अलगीकरण।">Safe disposal and segregation systems.</p></div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <div class="breadcrumb" id="testimonials"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a> / <span data-en="Reviews" data-np="समीक्षा">Reviews</span></div>
+    <section class="section-container" id="testimonials-section">
+        <h2 class="section-title"><span>⭐</span><span data-en="Patient Reviews" data-np="रोगी समीक्षा">Patient Reviews</span></h2>
+        <div class="cards-grid">
+            <div class="card"><p style="font-style: italic; margin-bottom: 1rem;" data-en="Professional, caring doctors. Excellent treatment and supportive staff throughout." data-np="पेशेवर, देखभाल डॉक्टर। उत्कृष्ट उपचार।">Professional, caring doctors. Excellent treatment and supportive staff.</p><p style="color: var(--primary); font-weight: 600;">⭐⭐⭐⭐⭐ AMIT PANTA</p></div>
+            <div class="card"><p style="font-style: italic; margin-bottom: 1rem;" data-en="Knowledgeable team, respectful service, clean facility. Highly recommended!" data-np="जानकार टीम, सम्मानपूर्वक सेवा, स्वच्छ सुविधा।">Knowledgeable team, respectful service, clean facility.</p><p style="color: var(--primary); font-weight: 600;">⭐⭐⭐⭐⭐ PURNA KANDEL</p></div>
+            <div class="card"><p style="font-style: italic; margin-bottom: 1rem;" data-en="Like family away from family. Compassionate care, safe environment." data-np="परिवार जैसा माहौल। दया और सुरक्षा।">Like family away from family. Compassionate care and safety.</p><p style="color: var(--primary); font-weight: 600;">⭐⭐⭐⭐⭐ RADHA POUDEL</p></div>
+            <div class="card"><p style="font-style: italic; margin-bottom: 1rem;" data-en="Dedicated professionals. Quick emergency response, excellent service quality." data-np="समर्पित पेशेवर। तीव्र आपातकालीन प्रतिक्रिया।">Dedicated professionals. Quick emergency response, excellent quality.</p><p style="color: var(--primary); font-weight: 600;">⭐⭐⭐⭐⭐ SANJAY SHARMA</p></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="breadcrumb" id="contact"><a href="file:///C:/Users/LENOVO/Downloads/index.html#home">Home</a> / <span data-en="Contact" data-np="सम्पर्क">Contact</span></div>
+    <section class="section-container" id="contact-section">
+        <h2 class="section-title"><span>📞</span><span data-en="Contact Information" data-np="संपर्क जानकारी">Contact Information</span></h2>
+        <div class="contact-grid">
+            <div class="contact-card"><h4>📞 <span data-en="Phone" data-np="फोन">Phone</span></h4><p><strong><span data-en="Main:" data-np="मुख्य:">Main:</span></strong> <a href="tel:056-562162">056-562162</a></p><p><strong><span data-en="Emergency:" data-np="आपातकाल:">Emergency:</span></strong> <a href="tel:+9855036213">+977-9855036213</a></p></div>
+            <div class="contact-card"><h4>✉️ <span data-en="Email" data-np="ईमेल">Email</span></h4><p><a href="mailto:info@gunjaman.gov.np">info@gunjaman.gov.np</a></p><p><a href="mailto:hdcsgunjaman@gmail.com">hdcsgunjaman@gmail.com</a></p></div>
+            <div class="contact-card"><h4>📍 <span data-en="Address" data-np="पता">Address</span></h4><p><span data-en="Pithuwa, Ward 14" data-np="पिथुवा, वार्ड 14">Pithuwa, Ward 14</span><br><span data-en="Ratnanagar, Chitwan" data-np="रत्ननगर, चितवन">Ratnanagar, Chitwan</span></p></div>
+            <div class="contact-card"><h4>🕐 <span data-en="Hours" data-np="समय">Hours</span></h4><p><strong><span data-en="Emergency:" data-np="आपातकाल:">Emergency:</span></strong> <span data-en="24/7" data-np="24/7">24/7</span></p><p><strong><span data-en="General:" data-np="सामान्य:">General:</span></strong> <span data-en="10 AM - 5 PM" data-np="10 AM - 5 PM">10 AM - 5 PM</span></p></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-np="द्रुत लिंक">Quick Links</h3>
+                <ul>
+                    <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#home" onclick="updateNavLinks(&#39;home&#39;)" data-en="Home" data-np="गृह पृष्ठ">Home</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#about" onclick="updateNavLinks(&#39;about&#39;)" data-en="About" data-np="हाम्रोबारे">About</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#services" onclick="updateNavLinks(&#39;services&#39;)" data-en="Services" data-np="सेवाहरू">Services</a></li>
+                    <li><a href="file:///C:/Users/LENOVO/Downloads/index.html#doctors" onclick="updateNavLinks(&#39;doctors&#39;)" data-en="Doctors" data-np="डाक्टरहरु">Doctors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Contact" data-np="सम्पर्क">Contact</h3>
+                <ul>
+                    <li><a href="tel:056-562162">📞 056-562162</a></li>
+                    <li><a href="mailto:info@gunjaman.gov.np">✉️ info@gunjaman.gov.np</a></li>
+                    <li><span data-en="24/7 Emergency" data-np="24/7 आपातकाल">24/7 Emergency</span></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Mission" data-np="मिशन">Mission</h3>
+                <p style="font-size: 0.9rem;" data-en="Quality healthcare for all. Dedicated to serving marginalized communities with compassion." data-np="सभी के लिए गुणस्तरीय स्वास्थ्य सेवा। दया के साथ समर्पित।">Quality healthcare for all. Serving marginalized communities with compassion.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gunjaman Singh Hospital. <span data-en="All rights reserved." data-np="सर्वाधिकार सुरक्षित।">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('[data-en][data-np]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+
+        function toggleMenu() {
+            document.getElementById('nav-links').classList.toggle('mobile-open');
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id + '-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateNavLinks(section) {
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[href="#${section}"]`).classList.add('active');
+            document.getElementById('nav-links').classList.remove('mobile-open');
+        }
+
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                updateNavLinks(this.getAttribute('href').substring(1));
+            });
+        });
+
+        document.querySelectorAll('.scroll-to-section').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const id = this.getAttribute('href').substring(1);
+                updateNavLinks(id);
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const sections = ['home', 'about', 'services', 'doctors', 'infrastructure', 'testimonials', 'contact'];
+            sections.forEach(section => {
+                const el = document.getElementById(section + '-section');
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < 200 && rect.bottom > 200) {
+                        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+                        document.querySelector(`[href="#${section}"]`).classList.add('active');
+                    }
+                }
+            });
+        });
+
+        setLanguage('en');
+    </script>
+
+
+</body></html>
