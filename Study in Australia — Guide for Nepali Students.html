@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///C:/Users/LENOVO/Downloads/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in Australia — Guide for Nepali Students</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green-dark: #085041; --green-mid: #0F6E56; --green: #1D9E75; --green-light: #5DCAA5; --green-pale: #E1F5EE;
+      --blue-dark: #0C447C; --blue-pale: #E6F1FB; --amber-dark: #633806; --amber-pale: #FAEEDA;
+      --purple-dark: #3C3489; --purple-pale: #EEEDFE;
+      --text: #1a1a1a; --text-muted: #5a5a5a; --text-hint: #999;
+      --border: rgba(0,0,0,0.1); --bg: #f7f8f6; --card-bg: #ffffff; --radius: 10px; --radius-sm: 6px;
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #085041 0%, #1D9E75 65%, #5DCAA5 100%); padding: 2.5rem 1.5rem 3rem; color: #fff; text-align: center; }
+    .header-flag { font-size: 28px; margin-bottom: 8px; }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+    header p { font-size: 15px; opacity: 0.85; max-width: 500px; margin: 0 auto 1.75rem; }
+    .search-wrap { position: relative; max-width: 560px; margin: 0 auto; }
+    .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 17px; opacity: 0.5; pointer-events: none; }
+    #search { width: 100%; padding: 12px 16px 12px 44px; border-radius: 30px; border: none; font-size: 15px; background: rgba(255,255,255,0.96); color: var(--text); outline: none; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .stats-row { display: flex; justify-content: center; gap: 12px; margin-top: 1.5rem; flex-wrap: wrap; }
+    .stat { background: rgba(255,255,255,0.15); border-radius: var(--radius-sm); padding: 8px 18px; text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 700; }
+    .stat-label { font-size: 11px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; }
+    .filter-bar { background: var(--card-bg); padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .filter-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+    .filter-row:last-child { margin-bottom: 0; }
+    .filter-label { font-size: 11px; color: var(--text-hint); text-transform: uppercase; letter-spacing: 0.5px; min-width: 46px; flex-shrink: 0; }
+    .tab-btn { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); font-size: 13px; cursor: pointer; background: transparent; color: var(--text-muted); transition: all 0.15s; font-family: inherit; }
+    .tab-btn:hover { border-color: var(--green); color: var(--green); }
+    .tab-btn.active { background: var(--green); border-color: var(--green); color: #fff; font-weight: 600; }
+    .type-btn { padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); font-size: 12px; cursor: pointer; background: transparent; color: var(--text-muted); transition: all 0.15s; font-family: inherit; }
+    .type-btn:hover { border-color: rgba(0,0,0,0.2); color: var(--text); }
+    .type-btn.active { background: #f0f0f0; border-color: #bbb; color: var(--text); font-weight: 600; }
+    .lang-section { background: #f0faf6; border: 1px solid #b2dfd0; border-radius: var(--radius); padding: 12px 14px; margin-top: 2px; width: 100%; }
+    .lang-top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+    .lang-label { font-size: 12px; font-weight: 600; color: #0F6E56; min-width: 100px; }
+    .test-btn { padding: 4px 14px; border-radius: 20px; border: 1px solid #9fd6c3; font-size: 12px; font-weight: 600; cursor: pointer; background: transparent; color: #0F6E56; transition: all 0.15s; font-family: inherit; }
+    .test-btn:hover { background: #d0f0e4; }
+    .test-btn.active { background: #0F6E56; border-color: #0F6E56; color: #fff; }
+    .score-inputs { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+    .score-group { display: flex; flex-direction: column; gap: 4px; }
+    .score-group label { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+    .score-group select { padding: 5px 10px; border-radius: var(--radius-sm); border: 1px solid #b2dfd0; font-size: 13px; font-family: inherit; background: #fff; color: var(--text); cursor: pointer; outline: none; }
+    .lang-clear { padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); font-size: 12px; cursor: pointer; background: transparent; color: var(--text-muted); font-family: inherit; }
+    .lang-clear:hover { color: var(--text); }
+    .lang-result { font-size: 12px; color: #0F6E56; margin-top: 8px; font-weight: 500; min-height: 16px; }
+    .results-info { padding: 0.75rem 1.5rem; font-size: 13px; color: var(--text-hint); background: var(--bg); }
+    .city-section { padding: 1.25rem 1.5rem 0.5rem; }
+    .city-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+    .city-name { font-size: 20px; font-weight: 700; }
+    .city-state { font-size: 13px; color: var(--text-hint); }
+    .city-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 1rem; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0.5rem 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 14px; padding-bottom: 1.5rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; transition: border-color 0.15s, box-shadow 0.15s; }
+    .card:hover { border-color: #5DCAA5; box-shadow: 0 2px 12px rgba(29,158,117,0.1); }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+    .card-name { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .badges { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
+    .badge { font-size: 10px; padding: 3px 8px; border-radius: 10px; white-space: nowrap; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; }
+    .badge-university { background: #E6F1FB; color: #0C447C; }
+    .badge-private { background: #EEEDFE; color: #3C3489; }
+    .badge-req-low { background: #EAF3DE; color: #27500A; }
+    .badge-req-mid { background: #FAEEDA; color: #633806; }
+    .badge-req-high { background: #FCEBEB; color: #791F1F; }
+    .card-fees { font-size: 12px; color: var(--text-muted); margin-bottom: 5px; }
+    .card-fees span { font-weight: 600; color: var(--text); }
+    .card-lang-req { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; line-height: 1.6; }
+    .card-lang-req strong { color: var(--text); }
+    .toggle-btn { font-size: 12px; color: #0F6E56; background: none; border: 1px solid #9fd6c3; cursor: pointer; padding: 5px 12px; border-radius: 20px; font-family: inherit; font-weight: 500; transition: background 0.15s; }
+    .toggle-btn:hover { background: #E1F5EE; }
+    .courses-wrap { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 10px; display: none; }
+    .courses-wrap.open { display: block; }
+    .course-category { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-hint); margin: 10px 0 5px; }
+    .course-category:first-child { margin-top: 0; }
+    .course-list { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .course-list li { font-size: 12.5px; color: var(--text-muted); padding: 4px 10px; background: #f7fdf9; border-left: 2px solid #9fd6c3; border-radius: 0 4px 4px 0; line-height: 1.4; }
+    .course-list li:hover { background: #E1F5EE; color: var(--text); }
+    .visit-link { display: inline-block; margin-top: 12px; font-size: 12px; color: #0F6E56; text-decoration: none; font-weight: 500; border: 1px solid #5DCAA5; padding: 5px 12px; border-radius: 6px; transition: background 0.15s; }
+    .visit-link:hover { background: #E1F5EE; }
+    .no-results { text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); }
+    footer { margin-top: 2rem; padding: 1.5rem; text-align: center; font-size: 12px; color: var(--text-hint); border-top: 1px solid var(--border); background: var(--card-bg); }
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .filter-bar { padding: 0.75rem 1rem; }
+      .city-section { padding: 1rem 1rem 0.5rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-flag">🇳🇵 ✈️ 🇦🇺</div>
+  <h1>Study in Australia</h1>
+  <p>Find universities &amp; colleges across 5 major cities — filter by your English test score</p>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search" placeholder="Search by institution or course name...">
+  </div>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Cities</div></div>
+    <div class="stat"><div class="stat-num" id="stat-institutions">64</div><div class="stat-label">Institutions</div></div>
+    <div class="stat"><div class="stat-num" id="stat-courses">929+</div><div class="stat-label">Courses</div></div>
+    <div class="stat"><div class="stat-num" id="stat-showing">6</div><div class="stat-label">Showing</div></div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-row">
+    <span class="filter-label">City</span>
+    <button class="tab-btn" data-city="All">All Cities</button>
+    <button class="tab-btn" data-city="Sydney">Sydney</button>
+    <button class="tab-btn active" data-city="Melbourne">Melbourne</button>
+    <button class="tab-btn" data-city="Brisbane">Brisbane</button>
+    <button class="tab-btn" data-city="Perth">Perth</button>
+    <button class="tab-btn" data-city="Adelaide">Adelaide</button>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Type</span>
+    <button class="type-btn" data-type="All">All Types</button>
+    <button class="type-btn" data-type="university">University</button>
+    <button class="type-btn active" data-type="private">Private College</button>
+  </div>
+  <div class="filter-row" style="flex-direction:column;align-items:flex-start;gap:0;">
+    <div class="lang-section">
+      <div class="lang-top">
+        <span class="lang-label">English Test</span>
+        <button class="test-btn" data-test="none">No filter</button>
+        <button class="test-btn active" data-test="ielts">IELTS</button>
+        <button class="test-btn" data-test="pte">PTE Academic</button>
+        <button class="test-btn" data-test="toefl">TOEFL iBT</button>
+      </div>
+      <div id="score-panel" style="display: block;">
+        <div class="score-inputs">
+          <div class="score-group">
+            <label id="overall-label">My overall band score</label>
+            <select id="overall-score"><option value="">— select —</option><option value="5">5</option><option value="5.5">5.5</option><option value="6">6</option><option value="6.5">6.5</option><option value="7">7</option><option value="7.5">7.5</option><option value="8">8</option><option value="8.5">8.5</option><option value="9">9</option></select>
+          </div>
+          <div class="score-group">
+            <label id="band-label">No individual band below</label>
+            <select id="band-score"><option value="">— select —</option><option value="4">4</option><option value="4.5">4.5</option><option value="5">5</option><option value="5.5">5.5</option><option value="6">6</option><option value="6.5">6.5</option><option value="7">7</option></select>
+          </div>
+          <button class="lang-clear" onclick="clearLang()">✕ Clear</button>
+        </div>
+        <div class="lang-result" id="lang-result">Overall: 6 · Min per band: 5.5 — 51 institutions match your scores</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="results-info" id="results-info">Showing 6 institutions across 1 city</div>
+<div id="main-content">
+    
+    <div class="city-section">
+      <div class="city-header"><div class="city-name">Melbourne</div><div class="city-state">VIC</div></div>
+      <div class="city-desc">Cultural capital — arts, medicine, engineering, and education</div>
+      <div class="grid">
+        <div class="card">
+            <div class="card-top">
+              <div class="card-name">Torrens University Australia (Melbourne)</div>
+              <div class="badges">
+                <span class="badge badge-private">Private</span>
+                <span class="badge badge-req-mid">IELTS 6</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>AUD 22,000–32,000/yr</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> IELTS 6 overall, no band below 5.5</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▼ View all 13 courses</button>
+            <div class="courses-wrap">
+              
+                <div class="course-category">Computing &amp; Technology</div>
+                <ul class="course-list">
+                  <li>Bachelor of Information Technology</li><li>Bachelor of Cyber Security and Behaviour</li><li>Bachelor of Computer Science (Data Science)</li><li>Master of Cyber Security</li><li>Master of Artificial Intelligence</li>
+                </ul>
+              
+                <div class="course-category">Business</div>
+                <ul class="course-list">
+                  <li>Bachelor of Business (Entrepreneurship)</li><li>Bachelor of Business (Marketing)</li><li>Bachelor of Accounting</li><li>Master of Business Administration</li>
+                </ul>
+              
+                <div class="course-category">Design &amp; Health</div>
+                <ul class="course-list">
+                  <li>Bachelor of Design (Communication Design)</li><li>Bachelor of Design (User Experience Design)</li><li>Bachelor of Health Science (Nutrition)</li><li>Bachelor of Health Science (Exercise Science)</li>
+                </ul>
+              
+              <a class="visit-link" href="https://www.torrens.edu.au/" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div><div class="card">
+            <div class="card-top">
+              <div class="card-name">Holmes Institute (Melbourne)</div>
+              <div class="badges">
+                <span class="badge badge-private">Private</span>
+                <span class="badge badge-req-low">IELTS 5.5</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>AUD 16,000–22,000/yr</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> IELTS 5.5 overall, no band below 5</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▼ View all 7 courses</button>
+            <div class="courses-wrap">
+              
+                <div class="course-category">Business</div>
+                <ul class="course-list">
+                  <li>Bachelor of Commerce (Accounting)</li><li>Bachelor of Commerce (Management)</li><li>Diploma of Business</li><li>Master of Business Administration</li><li>Graduate Diploma of Management (Marketing)</li><li>Graduate Diploma of Management (Human Resources)</li><li>Graduate Certificate of Business</li>
+                </ul>
+              
+              <a class="visit-link" href="https://www.holmes.edu.au/" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div><div class="card">
+            <div class="card-top">
+              <div class="card-name">Kaplan Business School (Melbourne)</div>
+              <div class="badges">
+                <span class="badge badge-private">Private</span>
+                <span class="badge badge-req-low">IELTS 5.5</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>AUD 18,000–26,000/yr</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> IELTS 5.5 overall, no band below 5</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▼ View all 5 courses</button>
+            <div class="courses-wrap">
+              
+                <div class="course-category">Business</div>
+                <ul class="course-list">
+                  <li>Bachelor of Business (Accounting)</li><li>Bachelor of Business (Management)</li><li>Bachelor of Business (Marketing)</li><li>Master of Business Administration (MBA)</li><li>Graduate Diploma of Business Administration</li>
+                </ul>
+              
+              <a class="visit-link" href="https://kaplan.edu.au/" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div><div class="card">
+            <div class="card-top">
+              <div class="card-name">Melbourne Institute of Technology (MIT)</div>
+              <div class="badges">
+                <span class="badge badge-private">Private</span>
+                <span class="badge badge-req-mid">IELTS 6</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>AUD 18,000–26,000/yr</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> IELTS 6 overall, no band below 5.5</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▲ Hide courses</button>
+            <div class="courses-wrap open">
+              
+                <div class="course-category">Computing &amp; Technology</div>
+                <ul class="course-list">
+                  <li>Bachelor of Information Technology (Software Development)</li><li>Bachelor of Information Technology (Network Engineering)</li><li>Bachelor of Information Technology (Cybersecurity)</li><li>Bachelor of Engineering (Honours) — Computer Systems Engineering</li><li>Master of Information Technology</li><li>Master of Information Systems</li>
+                </ul>
+              
+                <div class="course-category">Business</div>
+                <ul class="course-list">
+                  <li>Bachelor of Business (Accounting)</li><li>Bachelor of Business (Management)</li><li>Master of Business Administration</li><li>Graduate Diploma of Business Administration</li>
+                </ul>
+              
+              <a class="visit-link" href="https://www.mit.edu.au/" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div><div class="card">
+            <div class="card-top">
+              <div class="card-name">SAE Institute Melbourne</div>
+              <div class="badges">
+                <span class="badge badge-private">Private</span>
+                <span class="badge badge-req-low">IELTS 5.5</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>AUD 18,000–26,000/yr</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> IELTS 5.5 overall, no band below 5</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▼ View all 6 courses</button>
+            <div class="courses-wrap">
+              
+                <div class="course-category">Creative Arts &amp; Media</div>
+                <ul class="course-list">
+                  <li>Bachelor of Audio (Audio Production)</li><li>Bachelor of Film (Film Production)</li><li>Bachelor of Games (Game Production)</li><li>Bachelor of Games (Game Design)</li><li>Bachelor of Animation</li><li>Bachelor of Music (Contemporary Performance)</li>
+                </ul>
+              
+              <a class="visit-link" href="https://sae.edu.au/" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div><div class="card">
+            <div class="card-top">
+              <div class="card-name">Academies Australasia (Melbourne)</div>
+              <div class="badges">
+                <span class="badge badge-private">Private</span>
+                <span class="badge badge-req-low">IELTS 5.5</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>AUD 12,000–20,000/yr</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> IELTS 5.5 overall, no band below 5</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▼ View all 6 courses</button>
+            <div class="courses-wrap">
+              
+                <div class="course-category">Business &amp; IT</div>
+                <ul class="course-list">
+                  <li>Diploma of Information Technology (Network Engineering)</li><li>Diploma of Information Technology (Systems Administration)</li><li>Diploma of Business</li><li>Diploma of Accounting</li><li>Certificate IV in Cybersecurity</li><li>Advanced Diploma of Business</li>
+                </ul>
+              
+              <a class="visit-link" href="https://academies.edu.au/" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div>
+      </div>
+    </div></div>
+
+<footer>
+  <p>Course listings are comprehensive but may not reflect every intake. Requirements are standard minimums — always verify on official institution websites before applying.</p>
+  <p style="margin-top:6px;">Built for Nepali students exploring study options in Australia &nbsp;|&nbsp; 2025</p>
+</footer>
+
+<script>
+// courses is an object with category keys → array of full course names
+const DATA = [
+  {
+    city:"Sydney", state:"NSW", desc:"Australia's largest city — finance, technology, and health hub",
+    institutions:[
+      {
+        name:"University of Sydney", type:"university", fees:"AUD 40,000–55,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.sydney.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Advanced Computing (Computational Data Science)","Bachelor of Advanced Computing (Computer Science)","Bachelor of Advanced Computing (Software Development)","Master of Information Technology","Master of Cyber Security","Master of Data Science","Master of Complex Systems"],
+          "Engineering":["Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Software Engineering","Bachelor of Engineering (Honours) — Biomedical Engineering","Master of Engineering (Automation)","Master of Engineering (Civil Engineering)"],
+          "Business & Commerce":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Finance)","Bachelor of Commerce (Economics)","Bachelor of Commerce (Business Analytics)","Bachelor of Commerce (Marketing)","Master of Business Administration","Master of Commerce (Finance)"],
+          "Health & Medicine":["Bachelor of Nursing","Bachelor of Medicine and Bachelor of Surgery (MBBS)","Bachelor of Health Sciences","Bachelor of Pharmacy","Master of Nursing (Nurse Practitioner)","Master of Public Health"],
+          "Law & Arts":["Bachelor of Laws (LLB)","Bachelor of Arts","Bachelor of Architecture and Environments","Bachelor of Design Computing","Bachelor of Psychology","Bachelor of Social Work"]
+        }
+      },
+      {
+        name:"UNSW Sydney", type:"university", fees:"AUD 40,000–52,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.unsw.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Computer Science (Artificial Intelligence)","Bachelor of Computer Science (Cybersecurity)","Bachelor of Computer Science (Data Science)","Master of Information Technology Management","Master of Cyber Security","Master of Data Science and Decisions"],
+          "Engineering":["Bachelor of Engineering (Honours) — Software Engineering","Bachelor of Engineering (Honours) — Computer Engineering","Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Chemical Engineering","Master of Engineering (Telecommunications)","Master of Engineering Science (Power Engineering)"],
+          "Business & Commerce":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Actuarial Studies)","Bachelor of Commerce (Banking and Finance)","Bachelor of Commerce (Business Law)","Bachelor of Commerce (Economics)","Bachelor of Commerce (Information Systems)","Master of Business Administration (MBA)"],
+          "Health & Medicine":["Bachelor of Medical Studies / Doctor of Medicine (MD)","Bachelor of Nursing","Bachelor of Optometry","Master of Public Health","Master of Biomedical Engineering"],
+          "Law & Arts":["Bachelor of Laws (LLB)","Bachelor of Arts (Media and Communications)","Bachelor of Arts (Psychology)","Bachelor of Arts (Sociology)","Bachelor of Science (Psychology)"]
+        }
+      },
+      {
+        name:"University of Technology Sydney (UTS)", type:"university", fees:"AUD 30,000–42,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.uts.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Computer Science (Artificial Intelligence)","Bachelor of Computer Science (Data Analytics)","Bachelor of Information Systems","Master of Information Technology","Master of Data Science and Innovation","Master of Cyber Security and Behaviour"],
+          "Engineering":["Bachelor of Engineering (Honours) — Mechatronic Engineering","Bachelor of Engineering (Honours) — Civil and Structural Engineering","Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Engineering (Honours) — Software Engineering","Bachelor of Engineering (Honours) — Biomedical Engineering"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Finance)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration (MBA)"],
+          "Health & Nursing":["Bachelor of Nursing","Bachelor of Health Science (Chinese Medicine)","Bachelor of Health Science (Midwifery)","Bachelor of Physiotherapy","Master of Health Services Management"],
+          "Design & Communication":["Bachelor of Design (Visual Communication)","Bachelor of Design (Fashion and Textiles)","Bachelor of Communication (Digital and Social Media)","Bachelor of Communication (Journalism)","Bachelor of Creative Intelligence and Innovation"]
+        }
+      },
+      {
+        name:"Macquarie University", type:"university", fees:"AUD 32,000–45,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.mq.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Games Technology)","Bachelor of Information Technology (Networking)","Master of Cyber Security Analytics","Master of Information Technology"],
+          "Business & Commerce":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Actuarial Studies)","Bachelor of Commerce (Business Analytics)","Bachelor of Commerce (Finance)","Bachelor of Commerce (Management)","Master of Business Administration (MBA)","Master of Accounting"],
+          "Science & Data":["Bachelor of Science (Data Science)","Bachelor of Science (Environmental Science)","Bachelor of Actuarial Studies","Master of Data Science"],
+          "Health & Psychology":["Bachelor of Clinical Science","Bachelor of Psychology","Bachelor of Nursing (Pre-Registration)","Master of Clinical Psychology","Master of Physiotherapy"],
+          "Media & Law":["Bachelor of Media and Communications","Bachelor of Laws (LLB)","Bachelor of Education (Primary Teaching)","Bachelor of Social Science"]
+        }
+      },
+      {
+        name:"Western Sydney University", type:"university", fees:"AUD 26,000–35,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.westernsydney.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Information and Communications Technology","Bachelor of Information Systems","Bachelor of Computer Science (Cybersecurity)","Master of Cybersecurity","Master of Information Technology"],
+          "Engineering":["Bachelor of Engineering (Honours) — Civil and Construction Engineering","Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Software Engineering"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Finance)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Health":["Bachelor of Nursing","Bachelor of Paramedicine","Bachelor of Health Science (Physiotherapy)","Bachelor of Podiatric Medicine","Bachelor of Oral Health"],
+          "Education & Social":["Bachelor of Social Science","Bachelor of Education (Primary)","Bachelor of Social Work","Bachelor of Psychology"]
+        }
+      },
+      {
+        name:"Australian Catholic University (Sydney)", type:"university", fees:"AUD 24,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.acu.edu.au",
+        courses:{
+          "Health":["Bachelor of Nursing","Bachelor of Physiotherapy","Bachelor of Occupational Therapy","Bachelor of Paramedicine","Bachelor of Exercise and Sports Science","Master of Nursing"],
+          "Education":["Bachelor of Education (Primary Teaching)","Bachelor of Education (Secondary Teaching)","Master of Teaching (Primary)","Master of Teaching (Secondary)"],
+          "Business & IT":["Bachelor of Business Administration","Bachelor of Information Technology","Bachelor of Commerce","Master of Business Administration"],
+          "Arts & Social Work":["Bachelor of Social Work","Bachelor of Arts (Philosophy and Theology)","Bachelor of Psychological Science","Bachelor of Criminal Justice"]
+        }
+      },
+      {
+        name:"University of Notre Dame Australia (Sydney)", type:"university", fees:"AUD 24,000–34,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.notredame.edu.au",
+        courses:{
+          "Medicine & Health":["Bachelor of Medicine / Bachelor of Surgery (MBBS)","Bachelor of Nursing","Bachelor of Physiotherapy","Bachelor of Health Science","Bachelor of Midwifery"],
+          "Law & Business":["Bachelor of Laws (LLB)","Bachelor of Business Administration","Bachelor of Commerce (Accounting)"],
+          "Education & Arts":["Bachelor of Education (Primary)","Bachelor of Education (Secondary)","Bachelor of Arts","Bachelor of Philosophy","Bachelor of Social Work"]
+        }
+      },
+      {
+        name:"Charles Sturt University (Sydney Campus)", type:"university", fees:"AUD 22,000–30,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.csu.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Cyber Security","Bachelor of Computer Science","Master of Cyber Security","Graduate Diploma in Information Technology"],
+          "Business":["Bachelor of Business Administration","Bachelor of Accounting","Master of Business Administration","Graduate Diploma of Business Administration"],
+          "Health & Social":["Bachelor of Nursing","Bachelor of Social Work","Bachelor of Psychology","Bachelor of Medical Science"]
+        }
+      },
+      {
+        name:"Southern Cross University (Sydney)", type:"university", fees:"AUD 22,000–30,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.scu.edu.au",
+        courses:{
+          "Business & IT":["Bachelor of Business Administration","Bachelor of Information Technology","Bachelor of Accounting","Master of Business Administration","Master of Information Systems"],
+          "Health":["Bachelor of Nursing","Bachelor of Midwifery","Bachelor of Health Science","Bachelor of Paramedical Science"],
+          "Education & Arts":["Bachelor of Education (Primary)","Bachelor of Arts (Visual Arts)","Bachelor of Laws (LLB)"]
+        }
+      },
+      {
+        name:"Torrens University Australia (Sydney)", type:"private", fees:"AUD 22,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.torrens.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Cyber Security and Behaviour","Bachelor of Computer Science (Data Science)","Master of Cyber Security","Master of Artificial Intelligence"],
+          "Business":["Bachelor of Business (Entrepreneurship)","Bachelor of Business (Human Resources)","Bachelor of Business (Marketing)","Bachelor of Accounting","Master of Business Administration"],
+          "Design":["Bachelor of Design (Communication Design)","Bachelor of Design (User Experience Design)","Bachelor of Design (Interior Architecture and Design)","Master of Design Strategy and Innovation"],
+          "Health":["Bachelor of Health Science (Nutrition)","Bachelor of Health Science (Exercise Science)","Master of Health Service Management"]
+        }
+      },
+      {
+        name:"International College of Management Sydney (ICMS)", type:"private", fees:"AUD 22,000–28,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.icms.edu.au",
+        courses:{
+          "Business & Hospitality":["Bachelor of Business (Hotel and Resort Management)","Bachelor of Business (Event Management)","Bachelor of Business (International Tourism Management)","Bachelor of Business (Sport Management)","Bachelor of Business (Marketing and PR)","Bachelor of Business (Finance)","Diploma of Hospitality Management"]
+        }
+      },
+      {
+        name:"SAE Institute Sydney", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://sae.edu.au",
+        courses:{
+          "Creative Arts & Media":["Bachelor of Audio (Audio Production)","Bachelor of Film (Film Production)","Bachelor of Games (Game Production)","Bachelor of Games (Game Design)","Bachelor of Animation","Bachelor of Creative Media Production","Bachelor of Music (Contemporary Performance)","Diploma of Screen and Media"]
+        }
+      },
+      {
+        name:"Kaplan Business School (Sydney)", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://kaplan.edu.au",
+        courses:{
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Bachelor of Business (Human Resources)","Master of Business Administration (MBA)","Graduate Diploma of Business Administration","Graduate Certificate of Business Administration"]
+        }
+      },
+      {
+        name:"Holmes Institute (Sydney)", type:"private", fees:"AUD 16,000–22,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.holmes.edu.au",
+        courses:{
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Management)","Diploma of Business","Master of Business Administration","Graduate Diploma of Management (Human Resources)","Graduate Diploma of Management (Marketing)","Graduate Certificate of Business"]
+        }
+      },
+      {
+        name:"Excelsia College", type:"private", fees:"AUD 18,000–24,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.excelsia.edu.au",
+        courses:{
+          "Arts & Counselling":["Bachelor of Counselling","Bachelor of Arts (Theatre and Drama)","Bachelor of Music (Contemporary Music)","Bachelor of Arts (Dance)","Bachelor of Business","Master of Counselling"]
+        }
+      },
+      {
+        name:"Billy Blue College of Design", type:"private", fees:"AUD 22,000–30,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.billyblue.edu.au",
+        courses:{
+          "Design":["Bachelor of Design (Graphic Design)","Bachelor of Design (Interaction Design and User Experience)","Bachelor of Design (Interior Design)","Bachelor of Design (Communication Design)","Bachelor of Creative Intelligence and Design","Graduate Diploma of Design"]
+        }
+      },
+      {
+        name:"Alphacrucis University College", type:"private", fees:"AUD 14,000–20,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.ac.edu.au",
+        courses:{
+          "Theology & Social":["Bachelor of Arts (Ministry and Theology)","Bachelor of Arts (Christian Thought and Culture)","Bachelor of Business Administration","Bachelor of Education (Primary)","Bachelor of Social Science (Community Services)","Master of Divinity","Master of Arts (Ministry)"]
+        }
+      }
+    ]
+  },
+  {
+    city:"Melbourne", state:"VIC", desc:"Cultural capital — arts, medicine, engineering, and education",
+    institutions:[
+      {
+        name:"University of Melbourne", type:"university", fees:"AUD 36,000–52,000/yr",
+        ielts:{overall:7.0,band:6.5}, pte:{overall:65,skill:58}, toefl:{overall:94,section:24},
+        url:"https://www.unimelb.edu.au",
+        courses:{
+          "Computing & Technology":["Master of Information Technology","Master of Data Science","Master of Computer Science","Master of Cyber Security","Bachelor of Science (Computing and Software Systems)","Bachelor of Science (Data Science)"],
+          "Engineering":["Bachelor of Engineering (Honours) — Electrical Systems","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Software","Bachelor of Engineering (Honours) — Civil Engineering","Master of Engineering (Structural Engineering)","Master of Engineering (Electrical Engineering)"],
+          "Business & Commerce":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Actuarial Studies)","Bachelor of Commerce (Economics)","Bachelor of Commerce (Finance)","Bachelor of Commerce (Management)","Master of Business Administration (MBA)","Master of Management (Accounting)","Master of Finance"],
+          "Medicine & Health":["Doctor of Medicine (MD)","Bachelor of Biomedicine","Bachelor of Science (Biochemistry and Molecular Biology)","Master of Public Health","Master of Nursing Practice","Master of Physiotherapy"],
+          "Law & Arts":["Juris Doctor (JD)","Bachelor of Arts","Master of Laws (LLM)","Master of International Relations","Master of Social Work"]
+        }
+      },
+      {
+        name:"Monash University", type:"university", fees:"AUD 34,000–50,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.monash.edu",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Computer Science (Data Science)","Bachelor of Computer Science (Cybersecurity)","Bachelor of Information Technology","Master of Artificial Intelligence","Master of Cyber Security","Master of Data Science"],
+          "Engineering":["Bachelor of Engineering (Honours) — Electrical and Computer Systems Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Chemical Engineering","Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Software Engineering","Master of Engineering (Advanced Manufacturing)"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Banking and Finance)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Bachelor of Business (Economics)","Master of Business Administration","Master of Commerce (Accounting)"],
+          "Medicine & Pharmacy":["Bachelor of Pharmacy (Honours)","Bachelor of Nursing","Bachelor of Biomedical Science","Doctor of Medicine (MD)","Master of Pharmaceutical Science"],
+          "Law":["Bachelor of Laws (LLB)","Juris Doctor (JD)","Bachelor of Arts (Global Studies)","Bachelor of Education (Honours)"]
+        }
+      },
+      {
+        name:"RMIT University", type:"university", fees:"AUD 28,000–42,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.rmit.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Artificial Intelligence)","Bachelor of Information Technology (Networks and Communications)","Bachelor of Computer Science","Master of Cyber Security","Master of Information Technology"],
+          "Engineering":["Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Aerospace Engineering","Bachelor of Engineering (Honours) — Civil and Infrastructure Engineering","Master of Engineering (Advanced Manufacturing Technology)"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Economics and Finance)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Marketing)","Master of Business Administration","Master of Accounting"],
+          "Design & Arts":["Bachelor of Design (Games and Interactivity)","Bachelor of Design (Communication Design)","Bachelor of Design (Fashion Design)","Bachelor of Design (Industrial Design)","Bachelor of Communication (Professional Communication)"],
+          "Health & Education":["Bachelor of Nursing","Bachelor of Applied Science (Psychology)","Bachelor of Education (Early Childhood and Primary)"]
+        }
+      },
+      {
+        name:"Deakin University", type:"university", fees:"AUD 26,000–38,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.deakin.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Cloud Computing)","Bachelor of Information Technology (Artificial Intelligence)","Bachelor of Computer Science","Master of Cyber Security","Master of Information Technology"],
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Finance)","Bachelor of Commerce (Management)","Bachelor of Commerce (Marketing)","Master of Business Administration","Master of Commerce (Financial Planning)"],
+          "Health":["Bachelor of Nursing","Bachelor of Midwifery","Bachelor of Exercise and Sport Science","Bachelor of Nutrition Science","Bachelor of Psychology","Master of Nursing (Nurse Practitioner)"],
+          "Education":["Bachelor of Education (Primary Teaching)","Bachelor of Education (Secondary Teaching — Physical Education)","Bachelor of Education (Secondary Teaching — Mathematics and Science)","Master of Teaching (Primary)","Master of Teaching (Secondary)"],
+          "Law & Arts":["Bachelor of Laws (LLB)","Bachelor of Arts (Criminology)","Bachelor of Arts (International Studies)"]
+        }
+      },
+      {
+        name:"La Trobe University", type:"university", fees:"AUD 24,000–36,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.latrobe.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Computer Science","Bachelor of Cyber Security","Master of Information Technology","Master of Cyber Security"],
+          "Health":["Bachelor of Nursing","Bachelor of Paramedicine","Bachelor of Dental Science","Bachelor of Public Health","Bachelor of Podiatric Medicine","Master of Dietetics"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Economics and Finance)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Education & Social":["Bachelor of Education (Primary)","Bachelor of Social Work","Bachelor of Applied Social Science (Community Development)","Bachelor of Psychological Science"]
+        }
+      },
+      {
+        name:"Swinburne University of Technology", type:"university", fees:"AUD 26,000–38,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.swinburne.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Computer Science (Artificial Intelligence and Machine Learning)","Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Networking)","Master of Cyber Security","Master of Data Science"],
+          "Engineering":["Bachelor of Engineering (Honours) — Robotics and Mechatronics","Bachelor of Engineering (Honours) — Electronics and Computer Engineering","Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical Engineering"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Financial Planning)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Design & Arts":["Bachelor of Design (Communication Design)","Bachelor of Design (Industrial Design)","Bachelor of Design (Interior Architecture)","Bachelor of Communication and Media Studies"],
+          "Health & Sciences":["Bachelor of Science (Psychology)","Bachelor of Science (Biomedical Science)"]
+        }
+      },
+      {
+        name:"Victoria University", type:"university", fees:"AUD 22,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.vu.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Software Development)","Bachelor of Information Technology (Networking and Security)","Bachelor of Information Technology (Cybersecurity)","Master of Information Technology"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Health & Sport":["Bachelor of Nursing","Bachelor of Sport and Recreation Management","Bachelor of Exercise Science","Bachelor of Health Science (Osteopathy)"],
+          "Engineering & Education":["Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Education (Early Childhood Education)"]
+        }
+      },
+      {
+        name:"Australian Catholic University (Melbourne)", type:"university", fees:"AUD 24,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.acu.edu.au",
+        courses:{
+          "Health":["Bachelor of Nursing","Bachelor of Physiotherapy","Bachelor of Occupational Therapy","Bachelor of Paramedicine","Bachelor of Exercise and Sports Science","Master of Nursing (Nurse Practitioner)"],
+          "Education":["Bachelor of Education (Primary Teaching)","Bachelor of Education (Secondary Teaching)","Master of Teaching (Primary)","Master of Teaching (Secondary)"],
+          "Business & IT":["Bachelor of Business Administration","Bachelor of Information Technology","Master of Business Administration"],
+          "Arts & Social":["Bachelor of Social Work","Bachelor of Psychological Science","Bachelor of Arts (Philosophy and Theology)"]
+        }
+      },
+      {
+        name:"Federation University (Melbourne Campus)", type:"university", fees:"AUD 20,000–28,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://federation.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Mobile Applications Development)","Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Data Analytics)","Master of Information Technology"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Management and Commerce)","Master of Business Administration"],
+          "Engineering & Health":["Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical and Manufacturing Engineering","Bachelor of Nursing","Bachelor of Health Science"],
+          "Education":["Bachelor of Education (Primary Teaching)","Bachelor of Education (Secondary Teaching)"]
+        }
+      },
+      {
+        name:"Torrens University Australia (Melbourne)", type:"private", fees:"AUD 22,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.torrens.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Cyber Security and Behaviour","Bachelor of Computer Science (Data Science)","Master of Cyber Security","Master of Artificial Intelligence"],
+          "Business":["Bachelor of Business (Entrepreneurship)","Bachelor of Business (Marketing)","Bachelor of Accounting","Master of Business Administration"],
+          "Design & Health":["Bachelor of Design (Communication Design)","Bachelor of Design (User Experience Design)","Bachelor of Health Science (Nutrition)","Bachelor of Health Science (Exercise Science)"]
+        }
+      },
+      {
+        name:"Holmes Institute (Melbourne)", type:"private", fees:"AUD 16,000–22,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.holmes.edu.au",
+        courses:{
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Management)","Diploma of Business","Master of Business Administration","Graduate Diploma of Management (Marketing)","Graduate Diploma of Management (Human Resources)","Graduate Certificate of Business"]
+        }
+      },
+      {
+        name:"Kaplan Business School (Melbourne)", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://kaplan.edu.au",
+        courses:{
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration (MBA)","Graduate Diploma of Business Administration"]
+        }
+      },
+      {
+        name:"Melbourne Institute of Technology (MIT)", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.mit.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Software Development)","Bachelor of Information Technology (Network Engineering)","Bachelor of Information Technology (Cybersecurity)","Bachelor of Engineering (Honours) — Computer Systems Engineering","Master of Information Technology","Master of Information Systems"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Master of Business Administration","Graduate Diploma of Business Administration"]
+        }
+      },
+      {
+        name:"SAE Institute Melbourne", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://sae.edu.au",
+        courses:{
+          "Creative Arts & Media":["Bachelor of Audio (Audio Production)","Bachelor of Film (Film Production)","Bachelor of Games (Game Production)","Bachelor of Games (Game Design)","Bachelor of Animation","Bachelor of Music (Contemporary Performance)"]
+        }
+      },
+      {
+        name:"Academies Australasia (Melbourne)", type:"private", fees:"AUD 12,000–20,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://academies.edu.au",
+        courses:{
+          "Business & IT":["Diploma of Information Technology (Network Engineering)","Diploma of Information Technology (Systems Administration)","Diploma of Business","Diploma of Accounting","Certificate IV in Cybersecurity","Advanced Diploma of Business"]
+        }
+      }
+    ]
+  },
+  {
+    city:"Brisbane", state:"QLD", desc:"Fastest-growing city — outdoor lifestyle, IT, and health sector",
+    institutions:[
+      {
+        name:"University of Queensland (UQ)", type:"university", fees:"AUD 34,000–48,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.uq.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Computer Science","Bachelor of Computer Science (Cybersecurity)","Master of Data Science","Master of Information Technology","Master of Cyber Security"],
+          "Engineering":["Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Engineering (Honours) — Software Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Chemical Engineering","Master of Engineering Science (Industrial Automation)"],
+          "Business":["Bachelor of Business Management (Accounting)","Bachelor of Business Management (Finance)","Bachelor of Business Management (Human Resources)","Bachelor of Business Management (Marketing)","Bachelor of Economics","Master of Business Administration","Master of Commerce (Accounting)"],
+          "Medicine & Health":["Bachelor of Science (Biomedical Science)","Bachelor of Nursing","Bachelor of Pharmacy","Doctor of Medicine (MD)","Master of Public Health","Master of Dietetics"],
+          "Law":["Bachelor of Laws (LLB)","Juris Doctor (JD)","Bachelor of Arts","Bachelor of Social Work"]
+        }
+      },
+      {
+        name:"Queensland University of Technology (QUT)", type:"university", fees:"AUD 28,000–40,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.qut.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Computer Science)","Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Data Science)","Bachelor of Information Technology (Robotics and Mechatronics)","Master of Cyber Security","Master of Data Analytics","Master of Artificial Intelligence"],
+          "Engineering":["Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Aerospace Engineering","Bachelor of Engineering (Honours) — Environmental Engineering"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Entrepreneurship)","Bachelor of Business (Finance)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration","Master of Accounting"],
+          "Design & Creative":["Bachelor of Design (Visual Communication)","Bachelor of Design (Industrial Design)","Bachelor of Fine Arts","Bachelor of Business (Tourism Management)"],
+          "Health & Law":["Bachelor of Nursing","Bachelor of Laws (LLB)","Juris Doctor (JD)","Bachelor of Social Work","Bachelor of Applied Science (Psychology)"]
+        }
+      },
+      {
+        name:"Griffith University", type:"university", fees:"AUD 26,000–36,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.griffith.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Software Development)","Bachelor of Information Technology (Network Security)","Bachelor of Information Technology (Data Analytics)","Master of Information Technology","Master of Cyber Security"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Finance)","Bachelor of Business (Human Resource Management)","Bachelor of Business (International Business)","Bachelor of Business (Management)","Master of Business Administration"],
+          "Law & Criminology":["Bachelor of Criminology and Criminal Justice","Bachelor of Laws (LLB)","Juris Doctor (JD)","Bachelor of Justice Administration"],
+          "Health":["Bachelor of Nursing","Bachelor of Pharmacy (Honours)","Bachelor of Dental Health Science","Bachelor of Exercise Science","Bachelor of Physiotherapy (Honours)","Bachelor of Psychological Science"],
+          "Education & Arts":["Bachelor of Education (Primary)","Bachelor of Arts (International Relations)","Bachelor of Engineering (Honours) — Civil Engineering"]
+        }
+      },
+      {
+        name:"Bond University", type:"university", fees:"AUD 38,000–50,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://bond.edu.au",
+        courses:{
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Finance)","Bachelor of Business (Marketing)","Bachelor of Business (Management)","Bachelor of Business (Real Estate)","Master of Business Administration (MBA)","Master of Finance"],
+          "Law":["Bachelor of Laws (LLB)","Juris Doctor (JD)","Graduate Diploma of Legal Practice","Master of Laws (LLM)"],
+          "Health & Technology":["Bachelor of Health Sciences","Bachelor of Exercise Science","Bachelor of Information Technology","Bachelor of Software Engineering (Honours)"],
+          "Design & Media":["Bachelor of Film and Television","Bachelor of Communication (Journalism)","Bachelor of Communication (Public Relations)","Bachelor of Sport Management"]
+        }
+      },
+      {
+        name:"Australian Catholic University (Brisbane)", type:"university", fees:"AUD 24,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.acu.edu.au",
+        courses:{
+          "Health":["Bachelor of Nursing","Bachelor of Physiotherapy","Bachelor of Occupational Therapy","Bachelor of Paramedicine","Bachelor of Exercise and Sports Science"],
+          "Education & Social":["Bachelor of Education (Primary Teaching)","Bachelor of Education (Secondary Teaching)","Bachelor of Social Work","Bachelor of Psychological Science"],
+          "Business & IT":["Bachelor of Business Administration","Bachelor of Information Technology","Master of Business Administration"]
+        }
+      },
+      {
+        name:"University of Southern Queensland (Brisbane)", type:"university", fees:"AUD 22,000–30,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.usq.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Software Development)","Bachelor of Computer Science","Master of Cyber Security","Master of Information Technology"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Engineering & Health":["Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical Engineering","Bachelor of Nursing","Bachelor of Psychology (Honours)"]
+        }
+      },
+      {
+        name:"James Cook University (Brisbane Campus)", type:"university", fees:"AUD 24,000–34,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.jcu.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Cyber Security","Master of Information Technology"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Tourism, Hospitality and Events","Master of Business Administration"],
+          "Health & Education":["Bachelor of Nursing","Bachelor of Psychological Science","Bachelor of Education (Primary)","Bachelor of Social Work","Bachelor of Engineering (Honours) — Civil Engineering"]
+        }
+      },
+      {
+        name:"CQUniversity (Brisbane Campus)", type:"university", fees:"AUD 20,000–28,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.cqu.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Software Development)","Bachelor of Information Technology (Networking)","Bachelor of Cyber Security","Master of Information Technology","Master of Engineering"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Engineering & Health":["Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Nursing","Bachelor of Medical Science"]
+        }
+      },
+      {
+        name:"Torrens University Australia (Brisbane)", type:"private", fees:"AUD 22,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.torrens.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Cyber Security and Behaviour","Master of Cyber Security","Master of Artificial Intelligence"],
+          "Business & Design":["Bachelor of Business (Marketing)","Bachelor of Business (Entrepreneurship)","Bachelor of Accounting","Bachelor of Design (Communication Design)","Master of Business Administration"]
+        }
+      },
+      {
+        name:"Holmes Institute (Brisbane)", type:"private", fees:"AUD 16,000–22,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.holmes.edu.au",
+        courses:{
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Management)","Diploma of Business","Master of Business Administration","Graduate Diploma of Management (Marketing)","Graduate Diploma of Management (Human Resources)"]
+        }
+      },
+      {
+        name:"Kaplan Business School (Brisbane)", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://kaplan.edu.au",
+        courses:{
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration (MBA)","Graduate Diploma of Business Administration"]
+        }
+      },
+      {
+        name:"SAE Institute Brisbane", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://sae.edu.au",
+        courses:{
+          "Creative Arts":["Bachelor of Audio (Audio Production)","Bachelor of Film (Film Production)","Bachelor of Games (Game Production)","Bachelor of Games (Game Design)","Bachelor of Animation"]
+        }
+      },
+      {
+        name:"Academies Australasia (Brisbane)", type:"private", fees:"AUD 12,000–20,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://academies.edu.au",
+        courses:{
+          "Business & IT":["Diploma of Information Technology (Network Engineering)","Diploma of Business","Diploma of Accounting","Certificate IV in Cybersecurity","Advanced Diploma of Business"]
+        }
+      }
+    ]
+  },
+  {
+    city:"Perth", state:"WA", desc:"Gateway to Asia — mining, engineering, and health sciences hub",
+    institutions:[
+      {
+        name:"University of Western Australia (UWA)", type:"university", fees:"AUD 32,000–46,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.uwa.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Science (Data Science)","Master of Data Science","Master of Information Technology","Master of Cyber Security"],
+          "Engineering":["Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Software Engineering","Bachelor of Engineering (Honours) — Mining Engineering","Master of Engineering Science"],
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Finance)","Bachelor of Commerce (Economics)","Bachelor of Commerce (Marketing)","Bachelor of Commerce (Management)","Master of Business Administration","Master of Professional Accounting"],
+          "Medicine & Health":["Bachelor of Science (Biomedical Science)","Bachelor of Nursing","Doctor of Medicine and Surgery (MBBS/MD)","Master of Public Health","Bachelor of Pharmacy"],
+          "Law & Arts":["Bachelor of Laws (LLB)","Juris Doctor (JD)","Bachelor of Arts","Bachelor of Psychology and Neuroscience"]
+        }
+      },
+      {
+        name:"Curtin University", type:"university", fees:"AUD 28,000–40,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.curtin.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Information Technology (Cybersecurity and Forensics)","Bachelor of Information Technology (Software Engineering)","Bachelor of Science (Data Science)","Master of Cyber Security","Master of Information Technology","Master of Data Science"],
+          "Engineering":["Bachelor of Engineering (Honours) — Civil and Construction Engineering","Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Mining Engineering","Bachelor of Engineering (Honours) — Petroleum Engineering"],
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Finance and Banking)","Bachelor of Commerce (Human Resource Management)","Bachelor of Commerce (Marketing)","Master of Business Administration","Master of Accounting"],
+          "Health & Design":["Bachelor of Nursing","Bachelor of Physiotherapy","Bachelor of Design (Industrial Design)","Bachelor of Design (Interior Architecture)","Bachelor of Communication and Media Studies"],
+          "Law":["Bachelor of Laws (LLB)","Juris Doctor (JD)"]
+        }
+      },
+      {
+        name:"Murdoch University", type:"university", fees:"AUD 24,000–34,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.murdoch.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Software Engineering)","Bachelor of Information Technology (Cybersecurity)","Bachelor of Computer Science","Master of Information Technology","Master of Cyber Security"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Finance)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Health & Sciences":["Bachelor of Nursing","Bachelor of Science (Veterinary Biology)","Bachelor of Veterinary Medicine (Honours)","Bachelor of Forensic Science","Bachelor of Engineering (Honours) — Civil Engineering"],
+          "Law & Education":["Bachelor of Laws (LLB)","Bachelor of Education (Primary Teaching)","Bachelor of Psychological Science","Bachelor of Social Science (Criminology and Criminal Justice)"]
+        }
+      },
+      {
+        name:"Edith Cowan University (ECU)", type:"university", fees:"AUD 22,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.ecu.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Cyber Security","Bachelor of Information Technology (Networks)","Bachelor of Information Technology (Software Engineering)","Bachelor of Computer Science (Artificial Intelligence)","Master of Cyber Security","Master of Information Technology"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Finance)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Marketing)","Master of Business Administration"],
+          "Health & Engineering":["Bachelor of Nursing","Bachelor of Social Work","Bachelor of Engineering Technology (Electrical)","Bachelor of Engineering Technology (Civil)","Bachelor of Exercise and Sports Science"],
+          "Education & Arts":["Bachelor of Education (Primary Teaching)","Bachelor of Creative Arts (Photography)","Bachelor of Communication (Public Relations)"]
+        }
+      },
+      {
+        name:"University of Notre Dame Australia (Perth)", type:"university", fees:"AUD 22,000–30,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.notredame.edu.au",
+        courses:{
+          "Medicine & Health":["Doctor of Medicine (MD)","Bachelor of Nursing","Bachelor of Midwifery","Bachelor of Physiotherapy","Bachelor of Health Science"],
+          "Business & Law":["Bachelor of Business Administration","Bachelor of Laws (LLB)","Juris Doctor (JD)"],
+          "Education & Arts":["Bachelor of Education (Primary)","Bachelor of Arts","Bachelor of Philosophy","Bachelor of Social Work"]
+        }
+      },
+      {
+        name:"Kaplan Business School (Perth)", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://kaplan.edu.au",
+        courses:{
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration (MBA)","Graduate Diploma of Business Administration","Graduate Certificate of Business"]
+        }
+      },
+      {
+        name:"Holmes Institute (Perth)", type:"private", fees:"AUD 16,000–22,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.holmes.edu.au",
+        courses:{
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Management)","Diploma of Business","Master of Business Administration","Graduate Diploma of Management"]
+        }
+      },
+      {
+        name:"SAE Institute Perth", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://sae.edu.au",
+        courses:{
+          "Creative Arts":["Bachelor of Audio (Audio Production)","Bachelor of Film (Film Production)","Bachelor of Games (Game Production)","Bachelor of Animation"]
+        }
+      },
+      {
+        name:"Academies Australasia (Perth)", type:"private", fees:"AUD 12,000–20,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://academies.edu.au",
+        courses:{
+          "Business & IT":["Diploma of Information Technology (Network Engineering)","Diploma of Business","Certificate IV in Cybersecurity","Advanced Diploma of Business"]
+        }
+      },
+      {
+        name:"Polytechnic West", type:"private", fees:"AUD 10,000–18,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.polytechnicwest.edu.au",
+        courses:{
+          "Computing & Business":["Diploma of Information Technology (Cybersecurity)","Diploma of Information Technology (Systems Administration)","Diploma of Business Administration","Certificate IV in Cybersecurity"]
+        }
+      }
+    ]
+  },
+  {
+    city:"Adelaide", state:"SA", desc:"Most affordable big city — health, wine industry, and defence technology",
+    institutions:[
+      {
+        name:"University of Adelaide", type:"university", fees:"AUD 30,000–44,000/yr",
+        ielts:{overall:6.5,band:6.0}, pte:{overall:58,skill:50}, toefl:{overall:79,section:19},
+        url:"https://www.adelaide.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Computer Science","Bachelor of Computer Science (Artificial Intelligence)","Bachelor of Computer Science (Cybersecurity)","Master of Cyber Security","Master of Computing and Innovation","Master of Data Science"],
+          "Engineering":["Bachelor of Engineering (Honours) — Civil and Structural Engineering","Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Software Engineering","Bachelor of Engineering (Honours) — Petroleum Engineering","Master of Engineering (Telecommunications)"],
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Finance)","Bachelor of Commerce (Economics)","Bachelor of Commerce (Management)","Bachelor of Commerce (Marketing)","Master of Business Administration","Master of Accounting"],
+          "Medicine & Health":["Bachelor of Medicine and Bachelor of Surgery (MBBS)","Bachelor of Nursing","Bachelor of Pharmacy (Honours)","Bachelor of Science (Biomedical Science)","Master of Public Health"],
+          "Law":["Bachelor of Laws (LLB)","Juris Doctor (JD)","Bachelor of Mathematical Sciences","Bachelor of Agricultural Science"]
+        }
+      },
+      {
+        name:"Flinders University", type:"university", fees:"AUD 26,000–36,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.flinders.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Software Development)","Bachelor of Computer Science","Master of Information Technology","Master of Cybersecurity"],
+          "Engineering":["Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Civil and Structural Engineering","Bachelor of Engineering (Honours) — Robotics Engineering"],
+          "Health":["Bachelor of Nursing","Bachelor of Midwifery","Bachelor of Paramedicine","Bachelor of Medical Science","Bachelor of Speech Pathology (Honours)","Doctor of Medicine (MD)"],
+          "Business & Law":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Human Resource Management)","Bachelor of Laws (LLB)","Master of Business Administration"],
+          "Education & Social":["Bachelor of Education (Primary)","Bachelor of Social Work","Bachelor of Psychological Science","Bachelor of Criminology"]
+        }
+      },
+      {
+        name:"University of South Australia (UniSA)", type:"university", fees:"AUD 24,000–34,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.unisa.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology (Cybersecurity)","Bachelor of Information Technology (Network Engineering)","Bachelor of Computer and Information Sciences (Data Analytics)","Master of Cyber Security","Master of Data Science","Master of Information Technology"],
+          "Engineering":["Bachelor of Engineering (Honours) — Civil Engineering","Bachelor of Engineering (Honours) — Electrical and Electronic Engineering","Bachelor of Engineering (Honours) — Mechanical Engineering","Bachelor of Engineering (Honours) — Aerospace Engineering","Master of Engineering Management"],
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Enterprise Management)","Bachelor of Business (Human Resource Management)","Bachelor of Business (Marketing)","Master of Business Administration","Master of Accounting"],
+          "Health & Architecture":["Bachelor of Nursing","Bachelor of Midwifery","Bachelor of Nutrition and Dietetics","Bachelor of Architectural Studies","Master of Physiotherapy","Master of Social Work"],
+          "Education":["Bachelor of Education (Primary)","Bachelor of Education (Secondary)","Master of Teaching (Primary)"]
+        }
+      },
+      {
+        name:"Carnegie Mellon University (Adelaide)", type:"university", fees:"AUD 40,000–55,000/yr",
+        ielts:{overall:7.0,band:6.5}, pte:{overall:65,skill:58}, toefl:{overall:94,section:24},
+        url:"https://www.cmu.edu.au",
+        courses:{
+          "Technology & Management":["Master of Information Technology","Master of Software Engineering","Master of Business Administration (MBA)","Master of Embedded Software Engineering","Master of Entertainment Industry Management","Master of Engineering and Technology Innovation Management"]
+        }
+      },
+      {
+        name:"Torrens University Australia (Adelaide)", type:"university", fees:"AUD 22,000–32,000/yr",
+        ielts:{overall:6.0,band:5.5}, pte:{overall:50,skill:42}, toefl:{overall:60,section:14},
+        url:"https://www.torrens.edu.au",
+        courses:{
+          "Computing & Technology":["Bachelor of Information Technology","Bachelor of Cyber Security and Behaviour","Master of Cyber Security","Master of Artificial Intelligence"],
+          "Business & Design":["Bachelor of Business (Entrepreneurship)","Bachelor of Business (Marketing)","Bachelor of Accounting","Bachelor of Design (Communication Design)","Bachelor of Health Science (Nutrition)","Master of Business Administration"]
+        }
+      },
+      {
+        name:"Kaplan Business School (Adelaide)", type:"private", fees:"AUD 18,000–26,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://kaplan.edu.au",
+        courses:{
+          "Business":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Master of Business Administration (MBA)","Graduate Diploma of Business Administration","Graduate Certificate of Business"]
+        }
+      },
+      {
+        name:"Holmes Institute (Adelaide)", type:"private", fees:"AUD 16,000–22,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.holmes.edu.au",
+        courses:{
+          "Business":["Bachelor of Commerce (Accounting)","Bachelor of Commerce (Management)","Diploma of Business","Master of Business Administration","Graduate Diploma of Management"]
+        }
+      },
+      {
+        name:"Academies Australasia (Adelaide)", type:"private", fees:"AUD 12,000–20,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://academies.edu.au",
+        courses:{
+          "Business & IT":["Diploma of Information Technology (Network Engineering)","Diploma of Business","Diploma of Accounting","Certificate IV in Cybersecurity","Advanced Diploma of Business"]
+        }
+      },
+      {
+        name:"Australian Institute of Higher Education (AIH)", type:"private", fees:"AUD 16,000–24,000/yr",
+        ielts:{overall:5.5,band:5.0}, pte:{overall:42,skill:36}, toefl:{overall:46,section:10},
+        url:"https://www.aih.edu.au",
+        courses:{
+          "Business & IT":["Bachelor of Business (Accounting)","Bachelor of Business (Management)","Bachelor of Business (Marketing)","Bachelor of Information Technology","Master of Business Administration","Graduate Diploma of Business Administration"]
+        }
+      }
+    ]
+  }
+];
+
+// Count totals
+const totalAll = DATA.reduce((s,c)=>s+c.institutions.length, 0);
+const totalCourses = DATA.reduce((s,c)=>c.institutions.reduce((ss,i)=>ss+Object.values(i.courses).flat().length, s), 0);
+document.getElementById("stat-institutions").textContent = totalAll;
+document.getElementById("stat-courses").textContent = totalCourses+"+";
+document.getElementById("stat-showing").textContent = totalAll;
+
+const TEST_CONFIG = {
+  ielts: { overallLabel:"My overall band score", bandLabel:"No individual band below", overallOptions:[5.0,5.5,6.0,6.5,7.0,7.5,8.0,8.5,9.0], bandOptions:[4.0,4.5,5.0,5.5,6.0,6.5,7.0], reqField:"ielts", reqOverall:"overall", reqBand:"band", displayReq:(r)=>`IELTS ${r.overall} overall, no band below ${r.band}` },
+  pte:   { overallLabel:"My overall PTE score", bandLabel:"No communicative skill below", overallOptions:[30,36,42,46,50,54,58,62,65,70,75,79,85,90], bandOptions:[30,36,42,46,50,54,58,62,65], reqField:"pte", reqOverall:"overall", reqBand:"skill", displayReq:(r)=>`PTE ${r.overall} overall, no skill below ${r.skill}` },
+  toefl: { overallLabel:"My total TOEFL iBT score", bandLabel:"No section score below", overallOptions:[40,46,50,55,60,65,70,75,79,85,90,94,100,110,120], bandOptions:[8,10,12,14,17,19,22,24], reqField:"toefl", reqOverall:"overall", reqBand:"section", displayReq:(r)=>`TOEFL ${r.overall} overall, no section below ${r.section}` }
+};
+
+let activeCity="All", activeType="All", activeTest="none", userOverall=null, userBand=null;
+
+function populateScoreDropdowns(testKey){
+  const cfg=TEST_CONFIG[testKey];
+  const os=document.getElementById("overall-score");
+  const bs=document.getElementById("band-score");
+  document.getElementById("overall-label").textContent=cfg.overallLabel;
+  document.getElementById("band-label").textContent=cfg.bandLabel;
+  os.innerHTML=`<option value="">— select —</option>`+cfg.overallOptions.map(v=>`<option value="${v}">${v}</option>`).join("");
+  bs.innerHTML=`<option value="">— select —</option>`+cfg.bandOptions.map(v=>`<option value="${v}">${v}</option>`).join("");
+  userOverall=null; userBand=null;
+}
+
+function meetsRequirement(inst){
+  if(activeTest==="none") return true;
+  const cfg=TEST_CONFIG[activeTest];
+  const req=inst[cfg.reqField];
+  const oOk=userOverall===null||userOverall>=req[cfg.reqOverall];
+  const bOk=userBand===null||userBand>=req[cfg.reqBand];
+  return oOk&&bOk;
+}
+
+function getReqBadge(inst){
+  const ielts=inst.ielts.overall;
+  if(ielts<=5.5) return "badge-req-low";
+  if(ielts<=6.5) return "badge-req-mid";
+  return "badge-req-high";
+}
+
+function getReqDisplay(inst){
+  if(activeTest==="none"||!TEST_CONFIG[activeTest]) return `IELTS ${inst.ielts.overall} | PTE ${inst.pte.overall} | TOEFL ${inst.toefl.overall}`;
+  const cfg=TEST_CONFIG[activeTest];
+  return cfg.displayReq(inst[cfg.reqField]);
+}
+
+function countAllCourses(inst){
+  return Object.values(inst.courses).flat().length;
+}
+
+function getFiltered(){
+  const q=document.getElementById("search").value.toLowerCase().trim();
+  return DATA.map(c=>{
+    const insts=c.institutions.filter(i=>{
+      const tMatch=activeType==="All"||i.type===activeType;
+      const lMatch=meetsRequirement(i);
+      const allCourses=Object.values(i.courses).flat();
+      const sMatch=!q||i.name.toLowerCase().includes(q)||allCourses.some(co=>co.toLowerCase().includes(q));
+      return tMatch&&lMatch&&sMatch;
+    });
+    return{...c,institutions:insts};
+  }).filter(c=>(activeCity==="All"||c.city===activeCity)&&c.institutions.length>0);
+}
+
+function render(){
+  const filtered=getFiltered();
+  const total=filtered.reduce((s,c)=>s+c.institutions.length,0);
+  document.getElementById("stat-showing").textContent=total;
+  const info=document.getElementById("results-info");
+  if(!filtered.length){
+    document.getElementById("main-content").innerHTML=`<div class="no-results"><h3>No institutions found</h3><p>Try adjusting your scores or filters.</p></div>`;
+    info.textContent="No institutions match your filters";
+    return;
+  }
+  info.textContent=`Showing ${total} institution${total!==1?"s":""} across ${filtered.length} cit${filtered.length!==1?"ies":"y"}`;
+  document.getElementById("main-content").innerHTML=filtered.map((c,ci)=>`
+    ${ci>0?'<hr class="divider">':''}
+    <div class="city-section">
+      <div class="city-header"><div class="city-name">${c.city}</div><div class="city-state">${c.state}</div></div>
+      <div class="city-desc">${c.desc}</div>
+      <div class="grid">
+        ${c.institutions.map(inst=>{
+          const totalC=countAllCourses(inst);
+          return`<div class="card">
+            <div class="card-top">
+              <div class="card-name">${inst.name}</div>
+              <div class="badges">
+                <span class="badge badge-${inst.type}">${inst.type==="university"?"University":"Private"}</span>
+                <span class="badge ${getReqBadge(inst)}">IELTS ${inst.ielts.overall}</span>
+              </div>
+            </div>
+            <div class="card-fees">Intl fees: <span>${inst.fees}</span></div>
+            <div class="card-lang-req">📋 <strong>Requirements:</strong> ${getReqDisplay(inst)}</div>
+            <button class="toggle-btn" onclick="toggleCard(this)">▼ View all ${totalC} courses</button>
+            <div class="courses-wrap">
+              ${Object.entries(inst.courses).map(([cat,list])=>`
+                <div class="course-category">${cat}</div>
+                <ul class="course-list">
+                  ${list.map(co=>`<li>${co}</li>`).join("")}
+                </ul>
+              `).join("")}
+              <a class="visit-link" href="${inst.url}" target="_blank" rel="noopener">Visit official website ↗</a>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>`).join("");
+}
+
+function toggleCard(btn){
+  const wrap=btn.nextElementSibling;
+  const open=wrap.classList.toggle("open");
+  const total=wrap.querySelectorAll("li").length;
+  btn.textContent=open?`▲ Hide courses`:`▼ View all ${total} courses`;
+}
+
+function updateLangResult(){
+  const res=document.getElementById("lang-result");
+  if(activeTest==="none"){res.textContent="";return;}
+  const parts=[];
+  if(userOverall!==null) parts.push(`Overall: ${userOverall}`);
+  if(userBand!==null) parts.push(`Min per ${activeTest==="ielts"?"band":activeTest==="pte"?"skill":"section"}: ${userBand}`);
+  if(!parts.length){res.textContent="Select your scores above to filter institutions";return;}
+  const matching=DATA.reduce((s,c)=>s+c.institutions.filter(meetsRequirement).length,0);
+  res.textContent=`${parts.join(" · ")} — ${matching} institution${matching!==1?"s":""} match your scores`;
+}
+
+function clearLang(){
+  activeTest="none";
+  document.querySelectorAll(".test-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelector('.test-btn[data-test="none"]').classList.add("active");
+  document.getElementById("score-panel").style.display="none";
+  userOverall=null; userBand=null;
+  document.getElementById("lang-result").textContent="";
+  render();
+}
+
+document.querySelectorAll(".test-btn").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".test-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active"); activeTest=btn.dataset.test;
+  const panel=document.getElementById("score-panel");
+  if(activeTest==="none"){panel.style.display="none";userOverall=null;userBand=null;document.getElementById("lang-result").textContent="";}
+  else{panel.style.display="block";populateScoreDropdowns(activeTest);updateLangResult();}
+  render();
+}));
+document.getElementById("overall-score").addEventListener("change",e=>{userOverall=e.target.value?parseFloat(e.target.value):null;updateLangResult();render();});
+document.getElementById("band-score").addEventListener("change",e=>{userBand=e.target.value?parseFloat(e.target.value):null;updateLangResult();render();});
+document.getElementById("search").addEventListener("input",render);
+document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active"); activeCity=btn.dataset.city; render();
+}));
+document.querySelectorAll(".type-btn").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".type-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active"); activeType=btn.dataset.type; render();
+}));
+render();
+</script>
+
+
+</body></html>
